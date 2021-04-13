@@ -2,9 +2,13 @@
 
 ## Write a function `AddThree` that adds 3 to an input value
 
+AddThree <- function(input){
+  return(input+3)
+}
 
 ## Create a variable `ten` by passing 7 to your `AddThree` function
 
+ten <- AddThree(7)
 
 ## Write a function `FeetToMeters` that converts from feet to meters
 ## 
@@ -13,14 +17,27 @@
 ## in the opposite way: create function 'metersToFeet' and compute
 ## your height in feet below
 
+FeetToMeters <- function(feet){
+  return(feet*0.3048)
+}
 
 ## Create a variable `height.in.feet` that is your height in feet
 
+height.in.feet = 6
 
 ## Create a variable `height.in.meters` by passing `height.in.feet` to
 ## your `FeetToMeters` function
 
+height.in.meters <- FeetToMeters(height.in.feet)
 
 ## ------------------------------ challenge ------------------------------
 ## create a function that converts height from meters to feet and inches
 ## Hint: use operators %% (modulo) and %/% (integer division)
+
+heightToFeet <- function(meters){
+  imperial <- meters/3.28084
+  feet <- imperial %/% 12
+  inches <- imperial %% 12
+  inches <- inches / 12
+  cat(feet, "feet and",inches,"inches")
+}
