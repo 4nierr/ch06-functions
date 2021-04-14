@@ -10,11 +10,20 @@
 ##
 ## Hint: check out function 'nchar'
 
+compareStrings <- function(s1, s2){
+  if (nchar(s1) > nchar(s2)){
+    cat("your first string is longer by",nchar(s1)-nchar(s2), "characters")
+  } else if (nchar(s1) < nchar(s2)){
+    cat("your second string is longer by",nchar(s2)-nchar(s1), "characters")
+  } else{
+    cat("your strings are the same length!")
+  }
+}
 
 ## Call your `describe_difference` function by passing it different length strings
 ## to confirm that it works. Make sure to check all 3 conditions1
 
-
+compareStrings("hello1","world")
 
 ## Define a function `twiceLong` that takes in two character strings, and 
 ## returns whether or not (e.g., a boolean) the length of one argument
